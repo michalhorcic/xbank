@@ -41,7 +41,9 @@ defmodule Xbank.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.10.0"},
-      {:poison, "~> 2.0"}
+      {:poison, "~> 2.0"},
+      {:earmark, ">= 0.0.0", only: :dev},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end

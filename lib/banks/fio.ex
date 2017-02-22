@@ -12,7 +12,7 @@ defmodule Xbank.Fio do
   """
   def get_transactions(from, to) do
     url = "https://www.fio.cz/ib_api/rest/periods/#{api_key}/#{from}/#{to}/transactions.json"
-
+    get_response(url)
   end
 
   @doc """
@@ -20,6 +20,7 @@ defmodule Xbank.Fio do
   """
   def get_transactions do
     url = "https://www.fio.cz/ib_api/rest/last/bGJPYcpacvyHecnuIzJU8x6QsaXjWD0EDUa5OxqlVX63RsZxJvLur17pfqWtwXiP/transactions.json"
+    get_response(url)
   end
 
   @doc """
