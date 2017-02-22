@@ -7,7 +7,18 @@ defmodule Xbank.Mixfile do
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: "Xbank is a hub for working with different bank APIs",
+     package: package,
      deps: deps()]
+  end
+
+  def package do
+    [ name: :xbank,
+      files: ["lib", "mix.exs"],
+      maintainers: ["Michal Horcic"],
+      licenses: ["MIT"],
+      links: %{"Github" => "https://github.com/michalhorcic/xbank"},
+    ]
   end
 
   # Configuration for the OTP application
